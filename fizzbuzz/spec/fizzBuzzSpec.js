@@ -1,9 +1,26 @@
-describe ("Fizzbuzz", function() {
-  it("returns fizz", function() {
-    expect(Fizzbuzz(3)).toEqual("fizz");
+describe ("FizzBuzz", function() {
+  var fizzBuzz;
+
+  beforeEach(function() {
+    fizzBuzz = new FizzBuzz();
+  })
+
+  describe('knows when a number is', function(){
+
+    it("divisible by 3", function() {
+      expect(fizzBuzz.isDivisibleByThree(3)).toBe(true);
+    });
+
   });
 
-  it("returns buzz", function() {
-    expect(Fizzbuzz(5)).toEqual("buzz");
+  describe('knows when a number is NOT', function(){
+
+    it ("divisible by 3", function() {
+      fizzBuzz = new FizzBuzz();
+      expect(fizzBuzz.isDivisibleByThree(5)).toBe(false);
+    })
+
   });
+
+
 });
